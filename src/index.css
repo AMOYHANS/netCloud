@@ -1,0 +1,8 @@
+@import "./assets/css/normalize.css";
+@import "./assets/css/base.css";
+@import "./assets/iconfont/iconfont.css";
+@import "./assets/iconfont/colorfont.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
