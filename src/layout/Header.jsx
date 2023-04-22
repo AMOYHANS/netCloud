@@ -11,13 +11,13 @@ const Header = () => {
   return (
     <div className='w-full h-12 py-2.5 flex justify-evenly bg-red-600'>
         {/* 左侧 */}
-        <div className='flex w-full text-white'>
+        <div className='flex w-1/2 md:3/5 text-white'>
             {/* logo */}
             <div className='flex space-x-3 px-6'>
                 <div className='place-self-center'>
                     <span className='iconfont icon-yinleyanzou text-4xl font-semibold'></span>
                 </div>
-                <div className='text-xl place-self-center'>NetCloud</div>
+                <div className='text-xl place-self-center hidden sm:block'>NetCloud</div>
             </div>
             {/* 操作栏 */}
             <div className='place-self-center space-x-2 flex'>
@@ -30,12 +30,12 @@ const Header = () => {
             </div>
         </div>
         {/* 右侧 */}
-        <div className='flex w-full place-self-center justify-end px-6 space-x-4 text-white'>
-            <div className="">
+        <div className='flex w-1/2 md:2/5 place-self-center justify-end px-6 space-x-4 text-white'>
+            <div >
                 <Login/>
             </div>
             {/* 换肤 */}
-            <div className="place-self-center cursor-pointer">
+            <div className="place-self-center cursor-pointer ">
                 <ThemePicker/>
             </div>
             {/* 全屏 */}

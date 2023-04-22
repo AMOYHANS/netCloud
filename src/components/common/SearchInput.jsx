@@ -42,7 +42,7 @@ const SearchInput = () => {
 
   return (
     <Popover content={content} trigger="click">
-        <Input addonAfter={<SearchOutlined className='text-white'/>} placeholder=''/>
+        <Input placeholder='请输入关键词' title='请输入关键词' addonAfter={<SearchOutlined className='text-white'/>}/>
     </Popover>
   )
 }
