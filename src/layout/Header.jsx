@@ -9,7 +9,7 @@ import {RightOutlined, LeftOutlined} from '@ant-design/icons'
 const Header = () => {
     const [isFullScreen, setIsFullScreen] = useState(false)
   return (
-    <div className='w-full h-12 py-2.5 flex justify-evenly bg-red-600'>
+    <div className='w-full h-12 py-2.5 flex justify-evenly bg-red-600 z-1'>
         {/* 左侧 */}
         <div className='flex w-1/2 md:3/5 text-white'>
             {/* logo */}

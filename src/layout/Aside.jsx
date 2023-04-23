@@ -19,7 +19,7 @@ const Aside = () => {
   const navgate = useNavigate()
 
   return (
-    <div className='overflow-y-scroll'>
+    <div className='overflow-y-scroll hidden md:block'>
         <Menu items={items} defaultSelectedKeys={['1']}  className="w-48" onClick={({key}) => {
           console.log(key)
           navgate(key)

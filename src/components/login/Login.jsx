@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { 
   CaretDownFilled, UserOutlined,  RightOutlined,
   PoweroffOutlined, SettingOutlined, TrophyOutlined
 } from '@ant-design/icons'
 import { Popover, Button } from 'antd'
+import LoginPop from './LoginPop'
 
 const Login = () => {
+  const [user, setUser] = useState(0)
+  const [isLogin, setIsLogin] = useState(false)
   const content = (
     <div className="flex-col w-48">
       <div className='flex justify-around cursor-pointer'>
@@ -52,18 +55,33 @@ const Login = () => {
             <span>退出登录</span>
           </div>
       </div>
+      
     </div>
   )
   return (
-    <div className='flex space-x-2'>
-        <img className='w-10 h-10 rounded-full cursor-pointer' src="http://p1.music.126.net/xqMAooN0WUEh61_ZV79MDQ==/109951163728081057.jpg" alt="" />
-        <Popover content={content} trigger="click" className='place-self-center flex space-x-1 cursor-pointer'>
-          <span>木顶顶顶</span>
-          <div className='flex justify-center items-center'>
-            <CaretDownFilled/>
-          </div>
-        </Popover>
+    <>
+    <div className='flex space-x-2' onClick={() => !user && setIsLogin(true)}>
+        {
+          user ? (
+            <>
+              <img className='w-10 h-10 rounded-full cursor-pointer' src="http://p1.music.126.net/xqMAooN0WUEh61_ZV79MDQ==/109951163728081057.jpg" alt="" />
+              <Popover content={content} trigger="click" className='place-self-center flex space-x-1 cursor-pointer'>
+                <span>木顶顶顶d</span>
+                <div className='flex justify-center items-center'>
+                  <CaretDownFilled/>
+                </div>
+              </Popover>
+            </>
+          ) : (
+            <>
+              <img className='w-10 h-10 rounded-full cursor-pointer' src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" alt="" />
+              <span className='place-self-center cursor-pointer'>点击头像登录</span>
+            </>
+          )
+        }
     </div>
+    {isLogin && <LoginPop setIsLogin={setIsLogin}/>}
+    </>
   )
 }
 

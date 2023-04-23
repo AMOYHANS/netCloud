@@ -15,7 +15,7 @@ const Footer = () => {
     ]
   }
   return (
-    <div className='w-full justify-between px-2 flex space-x-0 sm:space-x-1' style={{height: '4.5rem', borderTop: '1px solid #dfd3d3', minWidth: '500px'}}>
+    <div className='w-full z-10 bg-white justify-between px-2 flex space-x-0 sm:space-x-1' style={{ height: '4.5rem', borderTop: '1px solid #dfd3d3', minWidth: '500px'}}>
       <audio 
       src=""
 
@@ -24,20 +24,20 @@ const Footer = () => {
         <div className='iconfont icon-yinleyanzou text-4xl'></div>
         <div className="hidden sm:block" style={{minWidth: '30px'}}>暂无音乐</div>
         <div className='text-2xl w-32 place-self-center space-x-0 sm:space-x-1 text-white' style={{minWidth: '120px'}}>
-          <StepBackwardOutlined className='rounded-full p-1 bg-red-500' />
+          <StepBackwardOutlined className='rounded-full p-1 bg-red-500 cursor-pointer' />
           {
           !isPlaying &&
-          <span className='bg-red-500 rounded-full px-3 py-2'>
+          <span className='bg-red-500 rounded-full px-3 py-2 cursor-pointer'>
             <span class="iconfont icon-play text-xl" onClick={() => setIsPlaying(true)}></span>
           </span>
           }
           {
           isPlaying &&
-          <span className='bg-red-500 rounded-full px-3 py-2'>
+          <span className='bg-red-500 rounded-full px-3 py-2 cursor-pointer'>
             <span class="iconfont icon-pause text-xl" onClick={() => setIsPlaying(false)}></span>
           </span>
           }
-          <StepForwardOutlined className='rounded-full p-1 bg-red-500'/>
+          <StepForwardOutlined className='rounded-full p-1 bg-red-500 cursor-pointer'/>
         </div>
       </div>
       <div className='flex justify-center items-center space-x-2 w-3/5'>
